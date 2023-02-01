@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            padding: 15px;
+            width: 70px;
+            height: 20px;
+            text-align: center;
+
+        }
+
+        /* li:first-child{
+    border-radius: 50px 0 0 50px;
+    } -> 부분적인 곡선으로 들어감
+    li:last-child{
+    border-radius: 0 50px 50px 0;
+    } -> 부분적인 곡선으로 들어감  */
+        a:hover {
+            background: wheat;
+        }
+
+        li:first-child {
+            border-radius: 50px 0 0 50px;
+        }
+
+        /* li중에서도 짝수번째 */
+        li:nth-child(2n) {
+            background: orange;
+        }
+
+        /* li 중에서도 홀수번째 */
+        li:nth-child(2n+1) {
+            background: yellow;
+        }
+
+        li:last-child {
+            border-radius: 0 50px 50px 0;
+        }
+
+        a {
+            color: black;
+        }
+
+        div {
+            font-size: 15px;
+            font-weight: bold;
+            color: black
+        }
+
+        #top {
+            width: 750px;
+            height: 200px;
+            background: limegreen;
+            padding: 2px;
+        }
+
+        #total {
+            width: 7500px;
+            height: 200px;
+        }
+
+        #top2 {
+            background-color: blanchedalmond;
+            color: black;
+            border-radius: 100px 10px 100px 10px;
+            border: 15px;
+            box-shadow: 10px 10px;
+            width: 100px;
+            height: 20px;
+            position: fixed;
+            top: 5px;
+            right: 5px;
+            text-align: center;
+        }
+
+        #center {
+            padding: 2px;
+            width: 750px;
+            height: 250px;
+            background: whitesmoke;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="total">
+        <div id="top">
+            <ul>
+                <li>
+                    <!-- 목록이 안뜰 경우 ctrl+space bar -->
+                    <a href="page20.html">회원가입</a>
+                </li>
+                <li>
+                    <a href="page10.html">제품정보</a>
+                </li>
+                <li>
+                    <a href="page30.html">게시판</a>
+                </li>
+                <li>
+                    <a href="page40.html">장바구니</a>
+                </li>
+            </ul>
+        </div>
+        <div id="top2">
+            장바구니
+        </div>
+        <div id="center">
+            <table border="1" color="black" align="center">
+                <tr align="center">
+                    <td width="20">번호</td>
+                    <td>품명</td>
+                    <td>수량</td>
+                    <td>금액</td>
+                    <td>총금액</td>
+                </tr>
+                <tr align="center">
+                    <td width="20">1</td>
+                    <td>가방</td>
+                    <td>
+                        <button type="button" onclick="fncalcount('p',this);">+</button>
+                        <input type="text" name="pop_out" value="0" readon1y="readonly" style="text-align: center;">
+                        <button type="button" onclick="fncalcount('m',this);">-</button>
+                    </td>
+                    <td>5000원</td>
+                    <td><img src="가방.JPG" width="120" height="100"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

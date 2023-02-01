@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYLe>
+        img[src $= JPG] {
+            border: 5px solid red;
+        }
+        img[src $= GIF] {
+            border: 5px solid blue;
+        }
+        img[src $= png] {
+            border: 5px dotted violet;
+        }
+        #d1 > p {
+            background: gold;
+        }
+        #d2 p {
+            background: silver;
+        }
+        #d1 {
+            width: 200px;
+            height: 100px;
+            background: greenyellow;
+        }
+        #d2 {
+            width: 200px;
+            height: 100px;
+            background: violet;
+        }
+    </STYLe>
+</head>
+<body>
+    <img src="아이들.png" alt="아이들"><br><br>
+    <img src="싱싱.GIF" alt="싱싱"><br><br>
+    <img src="가방.JPG" alt="가방"><br><br>
+    <!-- hr: 가로줄  -->
+    <hr>
+    <div id="d1">
+        <!-- p - 문단, 한줄이 떨어짐. -->
+        <p>내가 좋아하는 음식</p>
+        <div id="d11">
+            <p>나는 한식을 좋아해요.</p>
+            <p>나는 분식을 좋아해요.</p>
+        </div>
+    </div>
+    <div id="d2">
+        <!-- p - 문단, 한줄이 떨어짐. -->
+        <p>내가 싫어하는 음식</p>
+        <div id="d22" >
+            <p>나는 생선을 싫어해요.</p>
+            <p>나는 홍차를 싫어해요.</p>
+        </div>
+    </div>
+</body>
+</html>

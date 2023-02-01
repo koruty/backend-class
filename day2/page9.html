@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            padding: 15px;
+            width: 70px;
+            height: 20px;
+            text-align: center;
+
+        }
+
+        /* li:first-child{
+    border-radius: 50px 0 0 50px;
+    } -> 부분적인 곡선으로 들어감
+    li:last-child{
+    border-radius: 0 50px 50px 0;
+    } -> 부분적인 곡선으로 들어감  */
+        a:hover {
+            background: wheat;
+        }
+
+        li:first-child {
+            border-radius: 50px 0 0 50px;
+        }
+
+        /* li중에서도 짝수번째 */
+        li:nth-child(2n) {
+            background: orange;
+        }
+
+        /* li 중에서도 홀수번째 */
+        li:nth-child(2n+1) {
+            background: yellow;
+        }
+
+        li:last-child {
+            border-radius: 0 50px 50px 0;
+        }
+
+        a {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 순서없는 목록만들 때 : ul -->
+    <ul>
+        <li>
+            <!-- 목록이 안뜰 경우 ctrl+space bar -->
+            <a href="page1.html">회원가입</a>
+        </li>
+        <li>
+            <a href="page2.html">제품정보</a>
+        </li>
+        <li>
+            <a href="page3.html">게시판</a>
+        </li>
+        <li>
+            <a href="page11.html">장바구니</a>
+        </li>
+    </ul>
+</body>
+
+</html>
