@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function idcheck() {
+            id2 = document.getElementById("id2").value //접근연산자
+            size = id2.length
+            alert(size)
+            if (size < 5) {
+                div_tag = document.getElementById("result")
+                div_tag.innerHTML = "<font color=red>5글자 미만이므로 가입 불가</font>"
+            }else{
+                div_tag = document.getElementById("result")
+                div_tag.innerHTML = "<font color=blue>5글자 미만이므로 가입 가능</font>"
+            }
+        } //1. id가 id2인 input 태그의 value값을 가지고 와야한다.
+          //2. 글자길이(length)를 구해서
+          //3. 5글자 미만이면(if) 오류메시지를 띄워주세요.
+        function check() {
+            pw1 = document.getElementById("pw1").value //"root"를 가지고 옴
+            pw2 = document.getElementById("pw2").value //"1234"를 가지고 옴
+            //id2가 id와 일치, pw2가 pw와 일치. 둘 다 만족하면 로그인 성공
+            result = document.getElementById("result")
+            if (pw2 == pw1) {
+                //alert("로그인 성공!")
+                //result 안에 오른쪽에 있는 내용을 html 코드로 안쪽에 접어 넣으세요!
+                result.innerHTML = "<font color=red>로그인 성공!</font><img src='성공.JPG' width='100' height='100'><br>"
+            } else {
+                //alert("로그인 실패!")
+                result.innerHTML = "<font color=blue>로그인 실패!</font><img src='실패.JPG' width='100' height='100'><br>"
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    아이디 : <input type="text" id="id2" value="">
+    <button onclick="idcheck()">글자수 체크</button><br>
+    <hr color="blue">
+    패스워드 : <input type="text" id="pw1" value="1234"> <br>
+    패스워드 확인 : <input type="text" id="pw2" value="1234">
+    <button onclick="check()">확인</button><br>
+    <div id="result">
+        결과 들어갈 곳.
+    </div>
+</body>
+
+</html>

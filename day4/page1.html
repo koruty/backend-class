@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //var
+        var name = "홍길동" //''도 가능
+        var age = 10 //이 때 선언이라고 함
+        //변수는 언제 만들어지나요? 선언할 때 만들어 짐
+        age = 20 // 대입, 할당, =는 할당연산자
+        var tel = "010~~"
+        alert("내 나이는 " + age) // var는 재선언이 가능하기에 값을 덮어써버림
+
+        let phone = "010~~" // 선언
+        //let phone = "02~~" // 선언한 후에 재선언 안됨. ex) let phone = "~"/ phone = "~"는 가능하나 let phone = "~" / let phone = "~"는 불가능 
+
+        alert("내 전화번호는 "  + phone) //재선언이 불가능해서 값이 아예 출력되지 않음.
+
+        const PI = 3.14 // 재선언 및 재할당 불가능
+        //const PI = 3.15
+        alert("원주율은 " + PI) // const PI = "~" / const PI = "~" 및 PI = "~" 둘 다 값 출력 불가능
+</script>
+</head>
+<body>
+    
+</body>
+</html>

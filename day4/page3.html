@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //입력 => 태어난 연도 입력
+        //처리 => 연도로 나이 계산
+        //출력 => 저의 나이는 100세입니다 출력
+        year = prompt("태어난 연도를 입력하세요.")
+        age = 2023 - year
+        result = ("저의 나이는 " + age + "입니다!")
+        alert(result)
+
+        //강사님 코드
+        birth_year = prompt("태어난 연도를 입력하세요.")
+        //birth_year 변수를 생성한다.
+        //cpu가 prompt를 띄운다.
+        //사용자가 연도를 입력
+        //사용자가 입력한 데이터를 cpu가 birth_year에 저장
+        now = 2023
+        result = now - parseInt(birth_year)
+        alert("나의 나이는 " + result + "살 입니다!")
+        //cpu가 "나의 나이는"과 result에 저장된 값을 가지고 와서 결합
+        //결합한 문자들을 alert(문자들) 명령어를 실행하면서 넣어줌.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
