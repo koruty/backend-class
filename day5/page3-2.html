@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+        data.addRows([
+          [{'v':'대장', 'f':'대장<div style="color:red; font-style:italic">대빵</div>'},
+           '', '대빵'],
+          [{'v':'부대장', 'f':'부대장<div style="color:red; font-style:italic">부대빵</div>'},
+           '대장', '부대빵'],
+          ['부부대장', '대장', ''],
+          ['쫄병', '부대장', 'Bob Sponge'],
+          ['막내', '쫄병', '']
+        ]);
+
+        // Create the chart.
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        // Draw the chart, setting the allowHtml option to true for the tooltips.
+        chart.draw(data, {'allowHtml':true});
+      }
+   </script>
+    </head>
+  <body>
+    <div id="chart_div"></div>
+  </body>
+</html>
